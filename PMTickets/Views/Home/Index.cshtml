@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+	<!-- Banner -->
+<section id="banner">
+    <h2>Planetario Malargüe</h2>
+    <p>Hace tu reserva</p>
+    <ul class="actions">
+        <li>
+            <a href="/Reservas/Index.cshtml" class="button big">Reservar</a>
+        </li>
+        <li>@Html.ActionLink("Reservas", "Index", "Reservas")</li>
+    </ul>
+
+</section>
+<script type="text/javascript">
+       function disable_enable(el){
+	el.disabled = true;
+	if(el.value == 'Iniciar Sesión')
+		document.test.logout.disabled = false;
+	else
+		document.test.login.disabled = false;
+       }
+</script>
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <section class="4u$ 12u$(medium) 12u$(small)">
+                <h3>Contacto</h3>
+                <ul class="icons">
+                    <li><a href="#" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon rounded fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon rounded fa-google-plus"><span class="label">Google+</span></a></li>
+                </ul>
+                <ul class="tabular">
+                    <li>
+                        <h3>Dirección</h3>
+                        Malargüe, Mendoza
+                    </li>
+                    <li>
+                        <h3>email</h3>
+                        <a href="#">planetariomalargue@planetariomalargue.com</a>
+                    </li>
+                    <li>
+                        <h3>Telefono</h3>
+                        (026) 4000-0000
+                    </li>
+                </ul>
+            </section>
+        </div>
+   </div>
+</footer>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
